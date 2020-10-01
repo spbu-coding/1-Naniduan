@@ -36,7 +36,7 @@ int main(void) {
     for (int i=0; i<6; i++){
         results[i][0] = rectangles(a,b,experements[i]);
         results[i][1] = simpson(a,b,experements[i]);
-        printf("%d%s%f%c%f%c", experements[i], ": ", results[i][0], ' ', results[i][1], '\n');
+        printf("%s%.5f%c%.5f%c", "кол-во ", results[i][0], ' ', results[i][1], '\n');
     }
     return 0.;
 }
