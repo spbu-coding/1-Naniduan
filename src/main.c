@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-#include <windows.h>
 
 float f(float x) {
     return sinf(x);
@@ -27,16 +26,14 @@ float simpson(float start, float end, float amount) {
 }
 
 int main(void) {
-    SetConsoleOutputCP(CP_UTF8);
     float a = 0.,b = 0.;
     int experements[6] = {5,10,50,100,500,1000};
     float results[6][2];
-    printf("%s", "введите a и b:\n");
     scanf("%f%f", &a,&b);
     for (int i=0; i<6; i++){
         results[i][0] = rectangles(a,b,experements[i]);
         results[i][1] = simpson(a,b,experements[i]);
-        printf("%s%.5f%c%.5f%c", "кол-во ", results[i][0], ' ', results[i][1], '\n');
+        printf("%d%s%.5f%c%.5f%c", experements[i], ": ", results[i][0], ' ', results[i][1], '\n');
     }
     return 0.;
 }
