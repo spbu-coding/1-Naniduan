@@ -27,7 +27,7 @@ float simpson(float start, float end, float amount) {
 
 int main(void) {
     float a = 0.,b = 0.;
-    int experements[6] = {5,10,50,100,500,1000};
+    int experements[6] = {6,10,50,100,500,1000};
     float results[6][2];
     scanf("%f%f", &a,&b);
     for (int i=0; i<6; i++){
